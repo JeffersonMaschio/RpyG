@@ -1,0 +1,10 @@
+{
+    "scratch": {
+        "name": "scratch",
+        "damage": 30
+    },
+    "slam": {
+        "name": "slam",
+        "damage": 50
+    } 
+}

@@ -1,0 +1,32 @@
+{
+    "comentario": {
+        "1": "setar lista de monstros",
+        "2": "power = poder base que depois soma com o dano do move e também define \"nivel de ameaça\" "
+    },
+    "slime": {
+        "name": "slime",
+        "max_hp": 25,
+        "power": 5,
+        "moves": ["scratch", "slam"]
+    },
+    "wolf": {
+        "name": "wolf",
+        "max_hp": 40
+    },
+    "zombie": {
+        "name": "zombie",
+        "max_hp": 50
+    },
+    "skeleton": {
+        "name": "skeleton",
+        "max_hp": 45
+    },
+    "boar": {
+        "name": "boar",
+        "max_hp": 60
+    },
+    "orc": {
+        "name": "orc",
+        "max_hp": 95
+    }
+}
