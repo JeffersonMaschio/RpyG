@@ -1,2 +1,4 @@
-def main() -> None:
-    print("Hello from rpyg!")
+def main():
+    from .main import run
+    run()
+

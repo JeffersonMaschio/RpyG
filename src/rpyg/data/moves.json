@@ -1,10 +1,81 @@
 {
     "scratch": {
         "name": "scratch",
+        "type": "damage",
         "damage": 30
     },
     "slam": {
         "name": "slam",
+        "type": "damage",
         "damage": 50
-    } 
+    },
+    "bite": {
+        "name": "bite",
+        "type": "damage",
+        "damage": 15
+    },
+
+
+
+
+    "simple_attack": {
+        "name": "simple_attack",
+        "type": "damage",
+        "damage": 10
+    },
+    "spin_attack": {
+        "name": "spin_attack",
+        "type": "damage",
+        "damage": 10
+    },
+
+
+    "arrow": {
+        "name": "arrow",
+        "type": "damage",
+        "damage": 10
+    },
+    "power_arrow": {
+        "name": "power_arrow",
+        "type": "damage",
+        "damage": 10
+    },
+    "triple_arrow": {
+        "name": "triple_arrow",
+        "type": "damage",
+        "damage": 10
+    },
+
+
+
+    "minor_cure": {
+        "name": "minor_cure",
+        "type": "heal",
+        "damage": 0
+    },
+    "greater_healing": {
+        "name": "greater_healing",
+        "type": "heal",
+        "damage": 0
+    },
+
+
+
+    "magic_missiles": {
+        "name": "magic_missiles",
+        "type": "damage",
+        "damage": 25
+    },
+    "thunder_bolt": {
+        "name": "thunder_bolt",
+        "type": "damage",
+        "damage": 10
+    },
+    "fire_ball": {
+        "name": "fireball",
+        "type": "damage",
+        "damage": 10
+    }
+
+
 }

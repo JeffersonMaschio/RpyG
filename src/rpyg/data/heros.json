@@ -1,0 +1,30 @@
+{
+  "warrior": {
+    "name": "warrior",
+    "max_hp": 25,
+    "power": 0,
+    "moves": ["simple_attack"],
+    "defense": 0
+  },
+  "archer": {
+    "name": "archer",
+    "max_hp": 25,
+    "power": 0,
+    "moves": ["simple_attack"],
+    "defense": 0
+  },
+  "paladin": {
+    "name": "paladin",
+    "max_hp": 25,
+    "power": 0,
+    "moves": ["simple_attack"],
+    "defense": 0
+  },
+  "mage": {
+    "name": "mage",
+    "max_hp": 25,
+    "power": 0,
+    "moves": ["simple_attack"],
+    "defense": 0
+  }
+}
