@@ -1,6 +1,4 @@
 #regras e turnos
 
-from .main import hero
 
-def initBattle():
-    print(hero.max_hp)
+#make conditions for each selectred moves in a function

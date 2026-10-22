@@ -1,21 +1,22 @@
 #loop principal
+from time import sleep
 
 from .models import create_monster, create_hero
 
+hero = create_hero("paladin")
+slime = create_monster("slime")
 
-hero = create_hero("warrior")
 def run():
-    slime = create_monster("slime")
-    print(slime.name, slime.max_hp)
-
-
-    print(hero.name, hero.max_hp)
-    slime.take_damage(5)
-    print(slime.name, slime.max_hp)
-    hero.take_damage(10)
-    print(hero.name, hero.max_hp)
-
-
+    print("a slime apear")
+    sleep(0.5)
+    slime.show_stats()
+    print()
+    hero.show_stats()
+    print(hero.moves)
+    move_choose = input("choose move:")
+    if move_choose == "simple_attack":
+        slime.take_damage(10)
+        slime.show_stats()
 
 if __name__ == "__main__":
     run()

@@ -30,13 +30,13 @@
     },
 
 
-    "arrow": {
-        "name": "arrow",
+    "arrow_shot": {
+        "name": "arrow_shot",
         "type": "damage",
         "damage": 10
     },
-    "power_arrow": {
-        "name": "power_arrow",
+    "power_arrow_shot": {
+        "name": "power_arrow_shot",
         "type": "damage",
         "damage": 10
     },
@@ -51,12 +51,12 @@
     "minor_cure": {
         "name": "minor_cure",
         "type": "heal",
-        "damage": 0
+        "damage": 10
     },
     "greater_healing": {
         "name": "greater_healing",
         "type": "heal",
-        "damage": 0
+        "damage": 35
     },
 
 

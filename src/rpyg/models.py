@@ -15,6 +15,11 @@ class Monster:
     def take_damage(self, amount: int):
         self.max_hp = self.max_hp - amount
 
+    def show_stats(self):
+        print(f"{self.name},", f" Hp: {self.hp}/{self.max_hp}")
+        return
+
+
 class Hero:
     def __init__(self, name: str, max_hp: int, damage: int, defense: int, moves: list[Move]):
         self.name: str = name
@@ -27,14 +32,12 @@ class Hero:
     def take_damage(self, amount: int):
         self.max_hp = self.max_hp - amount
 
-    def use_move(self, move, target):
-        if move.type == "heal":
-            self.heal(move.value)
-        else:
-            target.take_damage(move.value)
-
     def heal(self, amount):
         self.hp = min(self.max_hp, self.hp + amount)
+
+    def show_stats(self):
+        print(f"{self.name},", f" Hp: {self.hp}/{self.max_hp}")
+        return
 
 class Move:
     def __init__(self, name: str, type: str, damage: int):
@@ -43,7 +46,7 @@ class Move:
         self.damage: int = damage
     
     def __repr__(self) -> str: #tipo toString() do java
-        return f"Move({self.name}, {self.type}, {self.damage})"
+        return f"({self.name}, {self.type}, {self.damage})"
 
 #------------------------------------------------------------------------
 
