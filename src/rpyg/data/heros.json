@@ -4,27 +4,27 @@
     "max_hp": 25,
     "power": 0,
     "moves": ["simple_attack"],
-    "defense": 0
+    "speed": 1
   },
   "archer": {
     "name": "archer",
     "max_hp": 25,
     "power": 0,
     "moves": ["arrow_shot"],
-    "defense": 0
+    "speed": 0
   },
   "paladin": {
     "name": "paladin",
     "max_hp": 25,
     "power": 0,
     "moves": ["simple_attack", "minor_cure"],
-    "defense": 0
+    "speed": 10
   },
   "mage": {
     "name": "mage",
     "max_hp": 25,
     "power": 0,
     "moves": ["simple_attack", "magic_missiles"],
-    "defense": 0
+    "speed": 0
   }
 }

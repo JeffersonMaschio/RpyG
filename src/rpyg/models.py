@@ -4,33 +4,40 @@ import json
 from pathlib import Path
 
 class Monster:
-    def __init__(self, name: str, max_hp: int, damage: int, defense: int, moves: list[Move]):
+    def __init__(self, name: str, max_hp: int, damage: int, speed: int, moves: list[Move]):
         self.name: str = name
         self.hp: int = max_hp
         self.max_hp: int = max_hp
         self.damage: int = damage
-        self.defense: int = defense
+        self.speed: int = speed
         self.moves: list[Move] = moves
 
     def take_damage(self, amount: int):
-        self.max_hp = self.max_hp - amount
+        self.max_hp = max(0, self.hp - amount)
 
     def show_stats(self):
         print(f"{self.name},", f" Hp: {self.hp}/{self.max_hp}")
         return
 
+    @property
+    def speed(self):
+        return self._speed
+
+    @speed.setter
+    def speed(self, value: int):
+        self._speed = max(0, value)  # evita velocidade negativa
 
 class Hero:
-    def __init__(self, name: str, max_hp: int, damage: int, defense: int, moves: list[Move]):
+    def __init__(self, name: str, max_hp: int, damage: int, speed: int, moves: list[Move]):
         self.name: str = name
         self.hp: int = max_hp
         self.max_hp: int = max_hp
         self.damage: int = damage
-        self.defense: int = defense
+        self.speed: int = speed
         self.moves: list[Move] = moves
 
     def take_damage(self, amount: int):
-        self.max_hp = self.max_hp - amount
+        self.max_hp = max(0, self.hp - amount)
 
     def heal(self, amount):
         self.hp = min(self.max_hp, self.hp + amount)
@@ -38,6 +45,16 @@ class Hero:
     def show_stats(self):
         print(f"{self.name},", f" Hp: {self.hp}/{self.max_hp}")
         return
+
+    @property
+    def speed(self):
+        return self._speed
+
+    @speed.setter
+    def speed(self, value: int):
+        self._speed = max(0, value)  # evita velocidade negativa
+
+
 
 class Move:
     def __init__(self, name: str, type: str, damage: int):
@@ -66,7 +83,7 @@ def create_monster(key: str) -> Monster:
         data["name"],
         data["max_hp"],
         data["power"],
-        data["defense"],
+        data["speed"],
         [MOVES[m] for m in data["moves"]],
     )
 
@@ -76,6 +93,6 @@ def create_hero(key: str) -> Hero:
         data["name"],
         data["max_hp"],
         data["power"],
-        data["defense"],
+        data["speed"],
         [MOVES[m] for m in data["moves"]],
     )
